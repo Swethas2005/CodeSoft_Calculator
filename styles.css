@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url("https://sfwallpaper.com/images/matrix-gif-wallpaper-12.jpg") no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#one {
+    width: 350px;
+    padding: 15px;
+    background-color: rgba(154, 226, 170, 0.9); 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+#one>p {
+    font-size: 2.8em;
+    font-weight: bolder;
+    font-style: italic;
+    color: #070A52;
+    margin-bottom: 15px; 
+    animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+#two {
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 15px 0; 
+    animation: slideIn 1s ease-in-out;
+}
+
+#three {
+    width: 90%;
+    height: 45px; 
+    margin: 0 auto 15px; 
+    padding: 8px; 
+    box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    font-size: 1.8em;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #f9f9f9;
+    animation: slideIn 1s ease-in-out;
+}
+
+#four {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 60px); 
+    gap: 12px; 
+}
+
+#four>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.4em;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+    background-color: #fff;
+    color: #070A52;
+    animation: buttonAnimation 0.5s ease-in-out;
+}
+
+@keyframes buttonAnimation {
+    0% { transform: scale(0); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+#four>div:hover {
+    background-color: #070A52;
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+#allclear, #finalvalue {
+    background-color: #e74c3c;
+    color: white;
+    animation: buttonAnimation 0.5s ease-in-out;
+}
+
+#finalvalue {
+    background-color: #2ecc71;
+    color: white;
+}
+
+#backspace {
+    background-color: #f39c12;
+    color: white;
+    animation: buttonAnimation 0.5s ease-in-out;
+}
+
+#backspace:hover {
+    background-color: #e67e22;
+}
+
+#four>div:nth-child(4), 
+#four>div:nth-child(8), 
+#four>div:nth-child(12), 
+#four>div:nth-child(16), 
+#four>div:nth-child(20) {
+    background-color: #070A52;
+    color: white;
+}
+
+#four>div:nth-child(4):hover, 
+#four>div:nth-child(8):hover, 
+#four>div:nth-child(12):hover, 
+#four>div:nth-child(16):hover,
+#four>div:nth-child(20):hover {
+    background-color: #fff;
+    color: #070A52;
+}
+
+#allclear:hover {
+    background-color: #c0392b;
+}
+
+#finalvalue:hover {
+    background-color: #27ae60;
+}
